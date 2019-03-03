@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-nav-header',
@@ -7,6 +7,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class NavHeaderComponent implements OnInit {
   loggedInUser = true;
+  sidebarToggle = new EventEmitter();
 
   constructor() {
   }
@@ -20,6 +21,10 @@ export class NavHeaderComponent implements OnInit {
 
   onLogout() {
     this.loggedInUser = !this.loggedInUser;
+  }
+
+  onToggle() {
+    this.sidebarToggle.emit();
   }
 
 }
