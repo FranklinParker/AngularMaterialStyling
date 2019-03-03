@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-nav-side',
@@ -6,10 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav-side.component.scss']
 })
 export class NavSideComponent implements OnInit {
+  loggedInUser = true;
+  @Output() closeSideNav = new EventEmitter();
 
-  constructor() { }
+
+  constructor() {
+  }
+
 
   ngOnInit() {
+  }
+
+  onLogout() {
+    this.loggedInUser = !this.loggedInUser;
   }
 
 }

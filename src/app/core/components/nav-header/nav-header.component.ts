@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-nav-header',
@@ -6,10 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav-header.component.scss']
 })
 export class NavHeaderComponent implements OnInit {
+  loggedInUser = true;
 
-  constructor() { }
+  constructor() {
+  }
+
+  get displayName() {
+    return 'Jeff';
+  }
 
   ngOnInit() {
+  }
+
+  onLogout() {
+    this.loggedInUser = !this.loggedInUser;
   }
 
 }

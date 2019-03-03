@@ -16,7 +16,9 @@ import { NavSideComponent } from './components/nav-side/nav-side.component';
     SharedModule
   ],
   exports: [
-    HomeComponent
+    HomeComponent,
+    NavSideComponent,
+    NavHeaderComponent
   ]
 })
 export class CoreModule { }
