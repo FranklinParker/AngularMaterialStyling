@@ -1,0 +1,31 @@
+
+a{
+  text-decoration: none;
+  color: white;
+  font-size: 14pt;
+}
+
+a:hover, a:active{
+  color: lightgrey;
+}
+
+.welcome-header{
+  font-size: 1rem;
+}
+
+
+.navigation-list-items{
+  list-style: none;
+  padding-left: 1rem;
+  margin: 0;
+}
+
+.nav-caption{
+  display: inline-block;
+  padding-left: 6px;
+}
+
+.logged-in-user{
+  margin-left: 10px;
+}
+

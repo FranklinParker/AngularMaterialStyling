@@ -21,4 +21,7 @@ export class NavSideComponent implements OnInit {
     this.loggedInUser = !this.loggedInUser;
   }
 
+  onSidenavClose() {
+    this.closeSideNav.emit();
+  }
 }

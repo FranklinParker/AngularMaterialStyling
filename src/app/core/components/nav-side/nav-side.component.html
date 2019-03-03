@@ -15,23 +15,21 @@
   </ng-container>
   <ng-container *ngIf="loggedInUser">
     <a mat-list-item >
-      <mat-icon>contacts</mat-icon>
+      <mat-icon>home</mat-icon>
       <span class="nav-caption"
-            routerLink="/business/contact"
-            (click)="onSidenavClose()">Contractors</span>
+            routerLink="/"
+            (click)="onSidenavClose()">Home</span>
     </a>
     <a mat-list-item >
-      <mat-icon>contacts</mat-icon>
+      <mat-icon>home</mat-icon>
       <span class="nav-caption"
-            routerLink="/contact"
-            (click)="onSidenavClose()">Contact</span>
+            routerLink="/"
+            (click)="onSidenavClose()">Home For Now</span>
     </a>
-    <mat-list-item *ngIf="loggedInUser">
-      <button mat-icon-button (click)="onLogout()">
+    <a mat-list-item (click)="onLogout()">
         <mat-icon >lock</mat-icon>
         <span class="nav-caption">Logout</span>
-      </button>
-    </mat-list-item>
+    </a>
   </ng-container>
 
 
