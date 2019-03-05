@@ -1,8 +1,14 @@
 
+$color-white: white;
+
+
+@mixin linkFonts{
+  font-size: 2rem;
+  color: $color-white;
+}
 a{
   text-decoration: none;
-  color: white;
-  font-size: 14pt;
+  @include linkFonts;
 }
 
 a:hover, a:active{
@@ -10,7 +16,7 @@ a:hover, a:active{
 }
 
 .welcome-header{
-  font-size: 1rem;
+  @include linkFonts;
 }
 
 

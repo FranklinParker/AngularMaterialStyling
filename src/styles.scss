@@ -15,8 +15,13 @@ html{
 
 }
 
+
+@function calculate($a, $b){
+  @return $a - $b;
+}
+
 .test-header{
-  border-radius: 10px;
+  border-radius: calculate(20, 2) *1px ;
   padding: .8rem;
   @include displayBlack(2rem);
   transition: all 300ms ease-in;
@@ -30,3 +35,4 @@ html{
   padding: .4rem;
 
 }
+
