@@ -2,15 +2,31 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html{
+  font-size: 62.5%;
+}
 
-@mixin displayBlack{
+
+
+@mixin displayBlack($fontSize){
   color: white;
   background-color: black;
+  font-size: $fontSize;
 
 }
 
 .test-header{
   border-radius: 10px;
-  @include displayBlack;
+  padding: .8rem;
+  @include displayBlack(2rem);
+  transition: all 300ms ease-in;
+
+
+}
+
+.test-header:hover{
+  color: darken(white, 25%) ;
+  font-size: 2.1rem;
+  padding: .4rem;
 
 }
