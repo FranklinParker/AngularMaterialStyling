@@ -2,3 +2,15 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@mixin displayBlack{
+  color: white;
+  background-color: black;
+
+}
+
+.test-header{
+  border-radius: 10px;
+  @include displayBlack;
+
+}
