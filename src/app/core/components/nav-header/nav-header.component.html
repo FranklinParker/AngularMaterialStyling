@@ -14,6 +14,7 @@
     <ng-container *ngIf="!loggedInUser" >
       <ul  fxLayout fxLayoutGap="10px" class="navigation-list-items">
         <li><a routerLink="/login" mat-button
+               (click)="loggedInUser=true"
                routerLinkActive="mat-accent">Login</a>
         </li>
       </ul>
