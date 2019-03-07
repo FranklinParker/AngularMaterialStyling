@@ -1,4 +1,6 @@
-
+.flip-y{
+  transform: rotateY(180deg);
+}
 
 mat-card {
   text-align: center;
