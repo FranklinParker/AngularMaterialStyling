@@ -1,11 +1,11 @@
 <mat-card>
   <mat-card-content>
     <div class="row">
-      <div class="col-1-of-3 cell">
+
+      <div *ngFor="let product of products" class="col-1-of-4 cell">
         <app-orders-products></app-orders-products>
       </div>
-      <div class="col-1-of-3 cell">This is big column, test the width</div>
-      <div class="col-1-of-3 cell">This is big column, test the width</div>
+
 
     </div>
   </mat-card-content>
