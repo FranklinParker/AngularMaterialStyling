@@ -1,4 +1,6 @@
-<mat-card [@cardSideState]="cardSide">
+<mat-card [@cardSideState]="cardSide"
+          [ngStyle]="getBackgroundImageStyle()">
+
   <ng-container *ngIf="cardSide==='front'">
     <h2>{{product.productName}}</h2>
   </ng-container>

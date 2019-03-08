@@ -18,7 +18,7 @@ import {animate, state, style, transition, trigger,} from '@angular/animations';
           transform: 'rotateY(180deg)'
         })
       ),
-      transition('* => *', animate('500ms'))
+      transition('* => *', animate('500ms ease-out'))
     ])
   ]
 })
@@ -35,5 +35,12 @@ export class OrdersProductsComponent implements OnInit {
   onFlip() {
     this.cardSide = this.cardSide === 'front' ? 'back' : 'front';
   }
+
+  getBackgroundImageStyle() {
+    return this.cardSide === 'front' ? {
+      color: 'blue', 'font-size': '2rem'
+    } : {};
+  }
+
 
 }
