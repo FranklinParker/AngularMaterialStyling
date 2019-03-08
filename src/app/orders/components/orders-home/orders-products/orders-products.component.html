@@ -8,5 +8,5 @@
   <ng-container *ngIf="cardSide==='back'">
     <h2 class="flip-y">{{product.description}}</h2>
   </ng-container>
-  <button mat-flat-button (click)="onFlip()">Flip</button>
+  <button mat-flat-button [ngClass]="cardSide==='back'? 'flip-y': ''" (click)="onFlip()">Flip</button>
 </mat-card>
