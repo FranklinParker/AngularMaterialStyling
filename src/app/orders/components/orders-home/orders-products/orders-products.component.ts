@@ -53,25 +53,5 @@ export class OrdersProductsComponent implements OnInit {
 
   }
 
-  getBackgroundImageStyle() {
-    const imageUrl = `url(../../../../assets/img/${this.product.backgroundImage})`;
-    const backgroundImage = `linear-gradient(rgba(100, 100, 100, 0.7), rgba(100, 100, 100, 0.7)) ${imageUrl}  `;
-    this.backImage = backgroundImage;
-    return this.cardSide === 'front' ? {
-      'background-image': backgroundImage,
-      'background-size': 'cover',
-      height: '30rem'
-
-    } : {};
-    /***
-     * background-image: linear-gradient(rgba(100, 100, 100, 0.7), rgba(100, 100, 100, 0.7)),
-     url(../../../../assets/img/home_background.jpeg);
-     background-size: cover;
-     background-position: center;
-     height: 80vh;
-     background-attachment: fixed;
-     */
-  }
-
 
 }
