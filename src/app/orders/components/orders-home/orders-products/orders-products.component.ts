@@ -38,8 +38,20 @@ export class OrdersProductsComponent implements OnInit {
 
   getBackgroundImageStyle() {
     return this.cardSide === 'front' ? {
-      color: 'blue', 'font-size': '2rem'
+      'background-image': 'linear-gradient(rgba(100, 100, 100, 0.7), rgba(100, 100, 100, 0.7)),' +
+        '     url(../../../../assets/img/edit_background.jpeg)',
+      'background-size': 'cover',
+      height: '30rem'
+
     } : {};
+    /***
+     * background-image: linear-gradient(rgba(100, 100, 100, 0.7), rgba(100, 100, 100, 0.7)),
+     url(../../../../assets/img/home_background.jpeg);
+     background-size: cover;
+     background-position: center;
+     height: 80vh;
+     background-attachment: fixed;
+     */
   }
 
 
