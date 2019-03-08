@@ -41,7 +41,10 @@ export class OrdersProductsComponent implements OnInit {
     if (this.cardSide === 'front') {
       return {
         'background-image':
-          'linear-gradient( rgba(60, 60, 60, 0.5), rgba(70, 70, 70, 0.7)), url(' + this.product.backgroundImage + ')',
+          'linear-gradient( to right bottom, rgba(10, 10, 10, 0.3), rgba(10, 10, 10, 0.3)), url(' + this.product.backgroundImage + ')',
+        'background-position': 'center',
+        'height': '40vh',
+        'background-attachment': 'fixed',
         color: 'white'
       };
     } else {
