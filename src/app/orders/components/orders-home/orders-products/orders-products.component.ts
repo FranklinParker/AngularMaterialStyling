@@ -37,12 +37,24 @@ export class OrdersProductsComponent implements OnInit {
     this.cardSide = this.cardSide === 'front' ? 'back' : 'front';
   }
 
+  getBackGround() {
+    if (this.cardSide === 'front') {
+      return {
+        'background-image':
+          'url(' + this.product.backgroundImage + ')'
+      };
+    } else {
+      return {};
+    }
+
+  }
+
   getBackgroundImageStyle() {
     const imageUrl = `url(../../../../assets/img/${this.product.backgroundImage})`;
     const backgroundImage = `linear-gradient(rgba(100, 100, 100, 0.7), rgba(100, 100, 100, 0.7)) ${imageUrl}  `;
     this.backImage = backgroundImage;
     return this.cardSide === 'front' ? {
-      'background-image': backgroundImage  ,
+      'background-image': backgroundImage,
       'background-size': 'cover',
       height: '30rem'
 
