@@ -1,8 +1,9 @@
 <mat-card [@cardSideState]="cardSide"
-          [ngStyle]="getBackgroundImageStyle()">
+          [ngStyle]="{'background-image':'url(' + product.backgroundImage + ')'}">>
 
   <ng-container *ngIf="cardSide==='front'">
     <h2>{{product.productName}}</h2>
+    <p>{{backImage}}</p>
   </ng-container>
   <ng-container *ngIf="cardSide==='back'">
     <h2 class="flip-y">{{product.description}}</h2>

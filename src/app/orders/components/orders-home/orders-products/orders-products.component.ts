@@ -25,6 +25,7 @@ import {animate, state, style, transition, trigger,} from '@angular/animations';
 export class OrdersProductsComponent implements OnInit {
   @Input() product: Product;
   cardSide = 'front';
+  backImage: string;
 
   constructor() {
   }
@@ -37,9 +38,11 @@ export class OrdersProductsComponent implements OnInit {
   }
 
   getBackgroundImageStyle() {
+    const imageUrl = `url(../../../../assets/img/${this.product.backgroundImage})`;
+    const backgroundImage = `linear-gradient(rgba(100, 100, 100, 0.7), rgba(100, 100, 100, 0.7)) ${imageUrl}  `;
+    this.backImage = backgroundImage;
     return this.cardSide === 'front' ? {
-      'background-image': 'linear-gradient(rgba(100, 100, 100, 0.7), rgba(100, 100, 100, 0.7)),' +
-        '     url(../../../../assets/img/edit_background.jpeg)',
+      'background-image': backgroundImage  ,
       'background-size': 'cover',
       height: '30rem'
 
