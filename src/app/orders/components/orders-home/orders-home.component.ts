@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 import {Product} from '../../models/product';
 import {ProductService} from '../../services/product.service';
@@ -10,11 +10,19 @@ import {ProductService} from '../../services/product.service';
 })
 export class OrdersHomeComponent implements OnInit {
   products: Product[] = [];
-  showSelected = true;
-  constructor(private productService: ProductService) { }
+  showSelected = false;
+  product: Product;
+
+  constructor(private productService: ProductService) {
+  }
 
   async ngOnInit() {
     this.products = await this.productService.getProducts();
+  }
+
+  onProductSelected(product: Product) {
+    this.showSelected = true;
+    this.product = product;
   }
 
 }

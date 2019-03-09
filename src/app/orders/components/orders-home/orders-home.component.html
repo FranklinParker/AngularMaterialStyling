@@ -3,7 +3,8 @@
     <app-product-selected *ngIf="showSelected"></app-product-selected>
     <div class="row">
       <div *ngFor="let product of products" class="col-1-of-3 cell">
-        <app-orders-products [product]="product"></app-orders-products>
+        <app-orders-products [product]="product"
+                             (productSelected)="onProductSelected($event)"></app-orders-products>
       </div>
     </div>
   </mat-card-content>

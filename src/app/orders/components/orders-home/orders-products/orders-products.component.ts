@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Product} from '../../../models/product';
 import {animate, state, style, transition, trigger,} from '@angular/animations';
 
@@ -24,6 +24,8 @@ import {animate, state, style, transition, trigger,} from '@angular/animations';
 })
 export class OrdersProductsComponent implements OnInit {
   @Input() product: Product;
+  @Output() productSelected: EventEmitter<Product> = new EventEmitter<Product>();
+
   cardSide = 'front';
   backImage: string;
 
@@ -35,6 +37,10 @@ export class OrdersProductsComponent implements OnInit {
 
   onFlip() {
     this.cardSide = this.cardSide === 'front' ? 'back' : 'front';
+  }
+
+  onSelect() {
+    this.productSelected.emit(this.product);
   }
 
   getBackGround() {
