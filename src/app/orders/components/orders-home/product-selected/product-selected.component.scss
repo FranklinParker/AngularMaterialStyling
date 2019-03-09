@@ -9,19 +9,15 @@ mat-card {
 }
 
 .close-popup {
-  &:link,
-  &:visited {
-    color: #000045;
-    position: absolute;
-    top: 1.5rem;
-    right: 2rem;
-    font-size: 4rem;
-    text-decoration: none;
-    display: inline-block;
-    transition: all .2s;
-    line-height: 1;
-  }
-
+  color: #000045;
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  font-size: 4rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: all .2s;
+  line-height: 1;
   &:hover {
     color: lightseagreen;
   }

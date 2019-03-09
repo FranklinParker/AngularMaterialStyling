@@ -1,4 +1,4 @@
-import {Component, OnInit, Input} from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import {Product} from '../../../models/product';
 
 @Component({
@@ -9,6 +9,7 @@ import {Product} from '../../../models/product';
 
 export class ProductSelectedComponent implements OnInit {
   @Input() product: Product;
+  @Output() closePopup = new EventEmitter<void>()
 
   constructor() {
   }
@@ -17,7 +18,7 @@ export class ProductSelectedComponent implements OnInit {
   }
 
   close() {
-    alert('hi');
+    this.closePopup.emit();
   }
 
 }
