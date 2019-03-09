@@ -1,6 +1,8 @@
 <mat-card>
   <mat-card-content>
-    <app-product-selected *ngIf="showSelected"></app-product-selected>
+    <app-product-selected
+      [product]="product"
+      *ngIf="showSelected"></app-product-selected>
     <div class="row">
       <div *ngFor="let product of products" class="col-1-of-3 cell">
         <app-orders-products [product]="product"
