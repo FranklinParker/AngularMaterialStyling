@@ -10,6 +10,7 @@ import {ProductService} from '../../services/product.service';
 })
 export class OrdersHomeComponent implements OnInit {
   products: Product[] = [];
+  showSelected = true;
   constructor(private productService: ProductService) { }
 
   async ngOnInit() {
