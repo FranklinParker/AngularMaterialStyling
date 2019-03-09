@@ -8,3 +8,16 @@ mat-card {
   height: 40vh;
   background-color: white;
 }
+
+mat-action-row{
+  position: absolute;
+  border-top: blue 1px solid;
+  bottom: 5%;
+  left: 0;
+  & button{
+    margin-top: 3px;
+    align-content: center;
+    box-shadow: 0 1.5rem 4rem rgba(100,100,100, .15);
+  }
+  width: 100%;
+}

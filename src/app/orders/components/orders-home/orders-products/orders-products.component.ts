@@ -43,7 +43,6 @@ export class OrdersProductsComponent implements OnInit {
         'background-image':
           'linear-gradient( to right bottom, rgba(10, 10, 10, 0.3), rgba(10, 10, 10, 0.3)), url(' + this.product.backgroundImage + ')',
         'background-position': 'center',
-        'height': '40vh',
         'background-attachment': 'fixed',
         color: 'white'
       };
