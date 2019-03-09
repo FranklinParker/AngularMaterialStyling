@@ -15,9 +15,10 @@ mat-action-row{
   bottom: 5%;
   left: 0;
   & button{
-    margin-top: 3px;
+    margin-top: 7px;
     align-content: center;
     box-shadow: 0 1.5rem 4rem rgba(100,100,100, .15);
+    margin-right: 8px;
   }
   width: 100%;
 }
