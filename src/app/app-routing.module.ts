@@ -5,11 +5,15 @@ import {HomeComponent} from './core/components/home/home.component';
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: HomeComponent,
+    data: {animation: {page: 'homePage'}}
+
   },
   {
     path: 'orders',
-    loadChildren: './orders/orders.module#OrdersModule'
+    loadChildren: './orders/orders.module#OrdersModule',
+    data: {animation: {page: 'ordersPage'}}
+
   }
 
 
