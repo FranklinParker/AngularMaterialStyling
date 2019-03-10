@@ -2,11 +2,15 @@ import {Component, OnInit} from '@angular/core';
 
 import {Product} from '../../models/product';
 import {ProductService} from '../../services/product.service';
+import {showStateTrigger} from '../../animation/animationTriggers';
 
 @Component({
   selector: 'app-orders-home',
   templateUrl: './orders-home.component.html',
-  styleUrls: ['./orders-home.component.scss']
+  styleUrls: ['./orders-home.component.scss'],
+  animations: [
+    showStateTrigger
+]
 })
 export class OrdersHomeComponent implements OnInit {
   products: Product[] = [];

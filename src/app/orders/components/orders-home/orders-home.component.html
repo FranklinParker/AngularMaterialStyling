@@ -1,6 +1,7 @@
 <mat-card>
   <mat-card-content>
     <app-product-selected
+      @showState
       (closePopup)="showSelected=false"
       [product]="product"
       *ngIf="showSelected"></app-product-selected>
