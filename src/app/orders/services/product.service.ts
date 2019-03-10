@@ -30,6 +30,26 @@ export class ProductService {
       backgroundImage: '../../../../assets/img/edit_background.jpeg'
 
     },
+    {
+      productName: 'product 5',
+      description: 'desc 5',
+      backgroundImage: '../../../../assets/img/home_background.jpeg'
+
+    },
+    {
+      productName: 'product 6',
+      description: 'desc 6',
+      backgroundImage: '../../../../assets/img/edit_background.jpeg'
+
+    },
+    {
+      productName: 'product 7',
+      description: 'desc 7',
+      backgroundImage: '../../../../assets/img/edit_background.jpeg'
+
+    },
+
+
   ];
 
 
