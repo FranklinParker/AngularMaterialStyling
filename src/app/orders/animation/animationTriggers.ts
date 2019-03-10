@@ -4,13 +4,15 @@ import {animate, state, style, transition, trigger, group, keyframes} from '@ang
 export const showStateTrigger = trigger('showState', [
   transition(':enter', [
     style({
-      transform: 'scale(.4)',
+      transform: 'scale(.2)',
       opacity: 0
     }),
-    animate(400)
+    animate('350ms ease-in')
   ]),
-  transition(':leave', animate(400, style({
-    opacity: 0
+  transition(':leave', animate('350ms ease-out', style({
+    opacity: 0,
+    transform: 'scale(.2)',
+
   })))
 ]);
 
