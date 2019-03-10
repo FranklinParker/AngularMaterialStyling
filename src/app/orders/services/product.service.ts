@@ -23,7 +23,13 @@ export class ProductService {
       description: 'desc 3',
       backgroundImage: '../../../../assets/img/home_background.jpeg'
 
-    }
+    },
+    {
+      productName: 'product 4',
+      description: 'desc 4',
+      backgroundImage: '../../../../assets/img/edit_background.jpeg'
+
+    },
   ];
 
 
