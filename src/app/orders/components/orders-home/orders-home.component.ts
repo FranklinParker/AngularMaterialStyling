@@ -25,4 +25,18 @@ export class OrdersHomeComponent implements OnInit {
     this.product = product;
   }
 
+  getProductRow(start: number, count: number) {
+    return this.products.slice(start, start + count);
+  }
+
+  getProductRows() {
+    const result = Math.ceil(this.products.length / 3);
+    const rows: number [] = [];
+    let startPos  = 0;
+    while (startPos < result) {
+      rows.push(startPos++);
+
+    }
+    return rows;
+  }
 }

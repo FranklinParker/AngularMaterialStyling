@@ -4,11 +4,15 @@
       (closePopup)="showSelected=false"
       [product]="product"
       *ngIf="showSelected"></app-product-selected>
-    <div class="row">
-      <div *ngFor="let product of products" class="col-1-of-3 cell">
-        <app-orders-products [product]="product"
-                             (productSelected)="onProductSelected($event)"></app-orders-products>
+    <ng-container *ngFor="let rowPos of getProductRows()">
+      <div class="row">
+        <div *ngFor="let product of getProductRow(rowPos * 3,3)" class="col-1-of-3 cell">
+          <app-orders-products [product]="product"
+                               (productSelected)="onProductSelected($event)"></app-orders-products>
+        </div>
       </div>
-    </div>
+    </ng-container>
+
+
   </mat-card-content>
 </mat-card>
