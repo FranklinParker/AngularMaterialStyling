@@ -8,6 +8,14 @@ mat-card mat-card-content{
   position: relative;
 }
 
+mat-card mat-card-header h1{
+  font-size: 4rem;
+  transition: all 400ms;
+  @include respond(tab-port) {
+    font-size: 2.5rem;
+  }
+}
+
 app-product-selected{
   display: block;
   position: fixed;
