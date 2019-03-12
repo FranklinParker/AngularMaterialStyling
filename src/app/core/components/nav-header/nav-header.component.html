@@ -39,12 +39,26 @@
         </li>
       </ul>
       <ul fxLayout fxLayoutGap="10px" class="navigation-list-items">
-        <li><a routerLink="/flex" mat-button
-               routerLinkActive="mat-accent">Flex</a>
+        <li><a mat-stroked-button (click)="onLogout()">Logout</a>
         </li>
       </ul>
-      <ul fxLayout fxLayoutGap="10px" class="navigation-list-items">
-        <li><a mat-stroked-button (click)="onLogout()">Logout</a>
+      <ul fxLayout
+          fxLayoutGap="10px"
+          class="navigation-list-items">
+        <li>
+          <a mat-button [matMenuTriggerFor]="demoMenu">Demos</a>
+          <mat-menu #demoMenu="matMenu"
+                    [overlapTrigger]="false">
+            <mat-label mat-menu-item routerLink="/flex">
+              <mat-icon>picture_in_picture</mat-icon>
+              Flex Demo
+            </mat-label>
+            <mat-label mat-menu-item routerLink="/auth/resemdConfirmationEmail">
+              <mat-icon>email</mat-icon>
+              Resend Confirmation email
+            </mat-label>
+
+          </mat-menu>
         </li>
       </ul>
     </ng-container>
