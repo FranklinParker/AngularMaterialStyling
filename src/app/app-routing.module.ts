@@ -14,6 +14,12 @@ const routes: Routes = [
     loadChildren: './orders/orders.module#OrdersModule',
     data: {animation: {page: 'ordersPage'}}
 
+  },
+  {
+    path: 'flex',
+    loadChildren: './flex/flex.module#FlexModule',
+    data: {animation: {page: 'flexPage'}}
+
   }
 
 
