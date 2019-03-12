@@ -9,13 +9,15 @@ mat-card-content {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-evenly;
+
 
 }
 
 app-flex-item {
   margin-top: .5rem;
   margin-left: 4px;
-  flex: 1 1 33%;
+  flex: 0 0 33%;
+  height: 10vh;
 }
