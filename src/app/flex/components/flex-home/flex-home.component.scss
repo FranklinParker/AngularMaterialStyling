@@ -1,5 +1,21 @@
 @import "../../../../styles";
+
 :host {
   display: block;
 
+}
+
+mat-card-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+
+}
+
+app-flex-item {
+  margin-top: .5rem;
+  margin-left: 4px;
+  flex: 1 1 33%;
 }
