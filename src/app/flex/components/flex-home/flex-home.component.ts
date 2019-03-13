@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-flex-home',
@@ -6,10 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./flex-home.component.scss']
 })
 export class FlexHomeComponent implements OnInit {
+  leftNavOpen = true;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
+  }
+
+  onLeftNavClose() {
+    this.leftNavOpen = false;
+  }
+
+  onLeftNavOpen() {
+    this.leftNavOpen = true;
   }
 
 }

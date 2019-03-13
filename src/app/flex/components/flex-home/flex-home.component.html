@@ -1,9 +1,17 @@
 <div class="container">
-  <div class="left-menu">
+  <div *ngIf="leftNavOpen" class="left-menu">
     <button mat-ripple
-            class="left-menu__close-button" mat-mini-fab><</button>
+            (click)="onLeftNavClose()"
+            class="left-menu__close-button" mat-icon-button>
+      <<</button>
     <button class="left-menu__button" mat-button>Add </button>
     <button class="left-menu__button" mat-button>Find </button>
+  </div>
+  <div *ngIf="!leftNavOpen" class="left-menu-closed">
+    <button mat-ripple
+            (click)="onLeftNavOpen()"
+            class="left-menu-closed__open-button" mat-icon-button>
+      >></button>
   </div>
   <div class="content">
 
