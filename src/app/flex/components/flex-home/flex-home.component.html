@@ -2,16 +2,21 @@
   <div *ngIf="leftNavOpen" class="left-menu">
     <button (click)="onLeftNavClose()"
             mat-ripple
-            class="left-menu__close-button" mat-icon-button>
-      <mat-icon>clear</mat-icon></button>
-    <button class="left-menu__button" mat-button>Add </button>
-    <button class="left-menu__button" mat-button>Find </button>
+            class="left-menu__close-button"
+            mat-icon-button>
+      <img src="../../../../assets/icons/arrow-with-circle-left.svg"
+           height="35" width="auto">
+    </button>
+
+    <button class="left-menu__button" mat-button>Add</button>
+    <button class="left-menu__button" mat-button>Find</button>
   </div>
   <div *ngIf="!leftNavOpen" class="left-menu-closed">
     <button mat-ripple
             (click)="onLeftNavOpen()"
             class="left-menu-closed__open-button" mat-icon-button>
-      <mat-icon>add</mat-icon></button>
+      <img src="../../../../assets/icons/circle-with-plus.svg"
+           height="35" width="auto"></button>
   </div>
   <div class="content">
 

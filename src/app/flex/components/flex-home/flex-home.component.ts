@@ -1,5 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 
+/**
+ *
+ * https://icomoon.io/app/#/select
+ */
 @Component({
   selector: 'app-flex-home',
   templateUrl: './flex-home.component.html',
