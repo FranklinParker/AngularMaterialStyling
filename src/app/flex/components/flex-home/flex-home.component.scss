@@ -24,9 +24,20 @@
   justify-content: flex-start;
   border: 1px solid red;
   &__button{
-    margin: 2px;
-    font-size: 2rem;
+    margin-top: 40px;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    font-weight: 500;
     color: blue;
+    width: 100%;
+    &:not(:first-child) {
+      margin-top: 15px;
+    }
+  }
+
+  &__button:hover{
+    color: white;
+    background-color: darkblue;
   }
   &__close-button{
     color: darkblue;

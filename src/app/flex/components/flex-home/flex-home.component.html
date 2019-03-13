@@ -1,5 +1,8 @@
 <div class="container">
   <div *ngIf="leftNavOpen" class="left-menu">
+
+    <button class="left-menu__button" mat-button>Add</button>
+    <button class="left-menu__button" mat-button>Find</button>
     <button (click)="onLeftNavClose()"
             mat-icon-button
             class="left-menu__close-button">
@@ -8,9 +11,6 @@
         <use xlink:href="../../../../assets/icons/icons.svg#icon-arrow-with-circle-left"></use>
       </svg>
     </button>
-
-    <button class="left-menu__button" mat-button>Add</button>
-    <button class="left-menu__button" mat-button>Find</button>
   </div>
   <div *ngIf="!leftNavOpen" class="left-menu-closed">
     <button mat-ripple
