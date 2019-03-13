@@ -1,15 +1,14 @@
-<mat-card>
-  <mat-card-header>
-    <h1>Flex</h1>
-  </mat-card-header>
-  <mat-card-content>
+<div class="container">
+  <div class="left-menu">
+    <button class="left-menu__button" mat-button>Add </button>
+    <button class="left-menu__button" mat-button>Find </button>
+  </div>
+  <div class="content">
+
     <app-flex-item [description]="'test'"></app-flex-item>
-    <app-flex-item [description]="'test1'"></app-flex-item>
+    <app-flex-item [description]="'test1'"
+                   class="app-flex-item-wide"></app-flex-item>
     <app-flex-item [description]="'test3'"></app-flex-item>
     <app-flex-item [description]="'test4'"></app-flex-item>
-
-
-  </mat-card-content>
-
-
-</mat-card>
+  </div>
+</div>
