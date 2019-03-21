@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {SaveMessagesService} from '../../services/saveMessages.service';
 
 /**
  *
@@ -12,10 +13,11 @@ import {Component, OnInit} from '@angular/core';
 export class FlexHomeComponent implements OnInit {
   leftNavOpen = true;
 
-  constructor() {
+  constructor(private messageService: SaveMessagesService) {
   }
 
-  ngOnInit() {
+  async ngOnInit() {
+    await this.messageService.getAllMessages();
   }
 
   onLeftNavClose() {
