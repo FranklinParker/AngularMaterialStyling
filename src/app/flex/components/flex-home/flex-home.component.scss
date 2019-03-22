@@ -15,11 +15,15 @@
   border: 1px solid blue;
 }
 
-app-flex-nav{
+.app-flex-nav-open{
   flex: 0 0 13%;
-
-
+  border: blue 4px solid;
 }
+.app-flex-nav-closed{
+  flex: 0 0 10px;
+  border: red 4px solid;
+}
+
 .content {
   margin: 4px;
   display: flex;

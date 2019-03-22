@@ -1,22 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-flex-nav',
   templateUrl: './flex-nav.component.html',
   styleUrls: ['./flex-nav.component.scss']
 })
+
 export class FlexNavComponent implements OnInit {
-  open = true;
+  @Input() open;
+  @Output() menuOpenState = new EventEmitter<boolean>();
   constructor() { }
 
   ngOnInit() {
   }
-  onClose(){
-    this.open = false;
+  onClose() {
+    this.menuOpenState.emit(false);
   }
 
-  onOpen(){
-    this.open = false;
+  onOpen() {
+    this.menuOpenState.emit(true);
   }
 
 }

@@ -1,5 +1,8 @@
 <div class="container">
-  <app-flex-nav></app-flex-nav>
+  <app-flex-nav
+    [open]="leftNavOpen"
+    (menuOpenState)="onLeftMenuOpenState($event)"
+    [ngClass]="leftNavClass" ></app-flex-nav>
   <div class="content">
 
     <app-flex-item [description]="'test'"></app-flex-item>
