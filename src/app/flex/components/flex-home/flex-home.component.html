@@ -1,26 +1,8 @@
 <div class="container">
-  <div *ngIf="leftNavOpen" class="left-menu">
-
-    <button class="left-menu__button" mat-button>Add</button>
-    <button class="left-menu__button" mat-button>Find</button>
-    <button (click)="onLeftNavClose()"
-            mat-icon-button
-            class="left-menu__close-button">
-
-      <svg class="left-menu__close-icon">
-        <use xlink:href="../../../../assets/icons/icons.svg#icon-arrow-with-circle-left"></use>
-      </svg>
-    </button>
-  </div>
-  <div *ngIf="!leftNavOpen" class="left-menu-closed">
-    <button mat-ripple
-            (click)="onLeftNavOpen()"
-            class="left-menu-closed__open-button" mat-icon-button>
-      <svg class="left-menu-closed__open-icon">
-        <use xlink:href="../../../../assets/icons/icons.svg#icon-circle-with-plus"></use>
-      </svg>
-    </button>
-  </div>
+  <app-flex-nav
+    [open]="leftNavOpen"
+    (menuOpenState)="onLeftMenuOpenState($event)"
+    [ngClass]="leftNavClass" ></app-flex-nav>
   <div class="content">
 
     <app-flex-item [description]="'test'"></app-flex-item>

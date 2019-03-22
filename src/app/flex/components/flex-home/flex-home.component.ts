@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 
+import {SaveMessagesService} from '../../services/saveMessages.service';
+
 /**
  *
  * https://icomoon.io/app/#/select
@@ -12,18 +14,19 @@ import {Component, OnInit} from '@angular/core';
 export class FlexHomeComponent implements OnInit {
   leftNavOpen = true;
 
-  constructor() {
+  constructor(private messageService: SaveMessagesService) {
   }
 
-  ngOnInit() {
+  get leftNavClass() {
+    return this.leftNavOpen ? 'app-flex-nav-open' : 'app-flex-nav-closed';
   }
 
-  onLeftNavClose() {
-    this.leftNavOpen = false;
+  async ngOnInit() {
+    await this.messageService.getAllMessages();
   }
 
-  onLeftNavOpen() {
-    this.leftNavOpen = true;
+  onLeftMenuOpenState(open: boolean) {
+    this.leftNavOpen = open;
   }
 
 }
