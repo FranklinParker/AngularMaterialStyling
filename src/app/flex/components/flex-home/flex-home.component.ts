@@ -25,16 +25,7 @@ export class FlexHomeComponent implements OnInit {
     await this.messageService.getAllMessages();
   }
 
-  onLeftNavClose() {
-    this.leftNavOpen = false;
-  }
-
-  onLeftNavOpen() {
-    this.leftNavOpen = true;
-  }
-
   onLeftMenuOpenState(open: boolean) {
-    alert('open ' + open)
     this.leftNavOpen = open;
   }
 

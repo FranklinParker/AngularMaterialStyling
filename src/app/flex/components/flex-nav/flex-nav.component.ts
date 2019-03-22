@@ -14,10 +14,12 @@ export class FlexNavComponent implements OnInit {
   ngOnInit() {
   }
   onClose() {
+
     this.menuOpenState.emit(false);
   }
 
   onOpen() {
+    //this.open = true;
     this.menuOpenState.emit(true);
   }
 

@@ -17,11 +17,9 @@
 
 .app-flex-nav-open{
   flex: 0 0 13%;
-  border: blue 4px solid;
 }
 .app-flex-nav-closed{
-  flex: 0 0 10px;
-  border: red 4px solid;
+  flex: 0 0 40px;
 }
 
 .content {
@@ -44,5 +42,5 @@ app-flex-item {
 }
 
 .app-flex-item-wide{
-  flex: 1 ;
+  flex: 1;
 }
