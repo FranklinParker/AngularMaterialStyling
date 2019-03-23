@@ -10,8 +10,9 @@
   margin: 30px auto;
   grid-template-rows: repeat(2, 150px);
 //  grid-template-columns: repeat(2,200px) 1fr;
+  grid-template-columns: 1fr 4fr 2fr;
 
-  grid-template-columns: repeat(3, 1fr);
+  //grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
   @include respond(tab-port) {
     grid-gap: 3px;
