@@ -6,7 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./grid-home.component.scss']
 })
 export class GridHomeComponent implements OnInit {
+  itemTitles: string [] = [
+    'this is first',
+    'this is second',
+    'this is third',
+    'this is 4th',
 
+  ];
   constructor() { }
 
   ngOnInit() {

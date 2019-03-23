@@ -2,7 +2,9 @@
   display: grid;
   margin: 30px auto;
   grid-template-rows: 150px 150px 150px;
-  grid-template-columns: 150px 150px;
+  grid-column-gap: 20px;
+  grip-row-gap: 20px;
+  grid-template-columns: 150px 150px 150px;
 }
 
 app-grid-item{

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 
 @Component({
   selector: 'app-grid-item',
@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./grid-item.component.scss']
 })
 export class GridItemComponent implements OnInit {
+  @Input() title: string;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }

@@ -1,0 +1,9 @@
+
+.item-container{
+  display: flex;
+  margin: 30px auto;
+  & p{
+    color: white;
+    background-color: blue;
+  }
+}
