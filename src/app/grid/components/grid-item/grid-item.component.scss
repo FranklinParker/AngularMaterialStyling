@@ -1,13 +1,12 @@
 
 .item-container{
-
   display: flex;
   color: white;
   background-color: lightseagreen;
-  font-size: 1.5rem;
+  font-size: 2rem;
   & p{
-    margin: 30px auto;
     flex: 1;
-    font-weight: 700;
+    margin: 30px auto;
+    font-weight: 900;
   }
 }
