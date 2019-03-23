@@ -1,5 +1,8 @@
-
+:host{
+  display: flex;
+}
 .item-container{
+  flex: 1;
   display: flex;
   color: white;
   flex-direction: column;

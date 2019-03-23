@@ -6,9 +6,8 @@
   grid-template-columns: 150px 150px 150px;
 
   grid-column-gap: 20px;
-  grip-row-gap: 100px;
+  grid-row-gap: 20px;
 }
-
 app-grid-item{
-  border: 1px blue solid;
+  border: 1px solid red;
 }
