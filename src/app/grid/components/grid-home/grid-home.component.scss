@@ -5,13 +5,19 @@
 }
 
 .container{
-  width: 1200px;
+  width: 90%;
   display: grid;
   margin: 30px auto;
   grid-template-rows: repeat(2, 150px);
-  grid-template-columns: repeat(2,200px) 1fr;
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
+//  grid-template-columns: repeat(2,200px) 1fr;
+
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  @include respond(tab-port) {
+    grid-gap: 3px;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 10px auto;
+  }
 }
 app-grid-item{
   border: 1px solid red;
