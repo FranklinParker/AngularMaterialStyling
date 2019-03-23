@@ -20,6 +20,12 @@ const routes: Routes = [
     loadChildren: './flex/flex.module#FlexModule',
     data: {animation: {page: 'flexPage'}}
 
+  },
+  {
+    path: 'grid',
+    loadChildren: './grid/grid.module#GridModule',
+    data: {animation: {page: 'gridPage'}}
+
   }
 
 
