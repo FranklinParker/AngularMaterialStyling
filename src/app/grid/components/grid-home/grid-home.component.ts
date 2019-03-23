@@ -10,7 +10,7 @@ export class GridHomeComponent implements OnInit {
     'this is first',
     'this is second',
     'this is third',
-    'this is 4th',
+    'this is forth'
 
   ];
   constructor() { }
