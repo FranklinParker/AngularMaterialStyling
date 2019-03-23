@@ -1,10 +1,15 @@
-.container{
-  width: 1000px;
-  display: grid;
-  margin: 30px auto;
-  grid-template-rows: 150px 150px 150px;
-  grid-template-columns: 150px 150px 150px;
+@import "../../../../styles";
 
+:host{
+  display: block;
+}
+
+.container{
+  width: 1500px;
+  display: grid;
+  margin: 30px 150px;
+  grid-template-rows: repeat(2, 150px);
+  grid-template-columns: repeat(3,200px);
   grid-column-gap: 20px;
   grid-row-gap: 20px;
 }
