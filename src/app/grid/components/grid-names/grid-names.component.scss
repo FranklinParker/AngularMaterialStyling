@@ -16,7 +16,7 @@
   }
 
   .content {
-    grid-row: 4/5;
+    grid-row: box-begin 3/ box-end 3;
     grid-column: 2/ span 3;
     display: flex;
     justify-content: space-evenly;
@@ -55,7 +55,7 @@
 
   .app-grid-item-1 {
     grid-row: box-begin 1 / span 3;
-    grid-column: 1/ 2;
+    grid-column: side-bar-start/ box-start 1;
 
   }
 
