@@ -33,7 +33,7 @@
 
   .footer {
     grid-row: box-end 3/ grid-end;
-    grid-column: 1/ -1;
+    grid-column: side-bar-start / -1;
     z-index: 10;
   }
 
