@@ -17,7 +17,8 @@ import {
   MatSortModule,
   MatMenuModule,
   MatTooltipModule,
-  MatSelectModule, MatCheckboxModule
+  MatSelectModule,
+  MatCheckboxModule
 } from '@angular/material';
 import {LayoutModule} from '@angular/cdk/layout';
 
