@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-grid-home',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GridHomeComponent implements OnInit {
   itemTitles: string [] = [
-    'this is first',
+    'this is first by numbers',
     'this is second',
     'this is third',
     'this is forth'

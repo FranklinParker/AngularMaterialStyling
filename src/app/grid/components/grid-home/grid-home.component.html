@@ -1,15 +1,1 @@
-<div class="container">
-  <div class="top">
-    <p>top</p>
-  </div>
-  <app-grid-item [title]="title"
-                 *ngFor="let title of itemTitles"> </app-grid-item>
-  <app-grid-item class="app-grid-item-1"
-                 [title]="'large'"></app-grid-item>
-  <div class="content">
-    <p>Content</p>
-  </div>
-  <div class="footer">
-    <p>footer</p>
-  </div>
-</div>
+<app-grid-numbers [itemTitles]="itemTitles"></app-grid-numbers>
