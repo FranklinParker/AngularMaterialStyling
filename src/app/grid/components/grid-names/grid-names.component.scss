@@ -7,7 +7,7 @@
   grid-template-rows: [top-begin] 80px [top-end box-begin] repeat(3, [box-begin] 150px [box-end]) 90px;
   //  grid-template-columns: repeat(2,200px) 1fr;
   // grid-template-columns: 50% 4fr 2fr;
-  grid-template-columns: 80px repeat(3, 1fr);
+  grid-template-columns: [side-bar-start] 80px [side-bar-end box-start] repeat(3,[box-start] 1fr [box-end]);
   grid-gap: 20px;
   @include respond(tab-port) {
     grid-gap: 3px;
@@ -32,13 +32,13 @@
   }
 
   .footer {
-    grid-row: [box-end] / -1;
+    grid-row: box-end 2/ -1;
     grid-column: 1/ -1;
     z-index: 10;
   }
 
   .top {
-    grid-row: [top-begin] / [top-end];
+    grid-row: top-begin / top-end;
     grid-column: 1/ -1;
     font-size: 4rem;
     display: flex;
@@ -54,7 +54,7 @@
   }
 
   .app-grid-item-1 {
-    grid-row: 2 / span 3;
+    grid-row: box-begin 1 / span 3;
     grid-column: 1/ 2;
 
   }
