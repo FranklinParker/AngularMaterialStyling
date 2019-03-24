@@ -39,7 +39,7 @@
 
   .top {
     grid-row: top-begin / top-end;
-    grid-column: 1/ -1;
+    grid-column: side-bar-start/ -1;
     font-size: 4rem;
     display: flex;
     flex-direction: column;
