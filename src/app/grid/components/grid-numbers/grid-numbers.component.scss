@@ -9,6 +9,7 @@
 .container{
   @include borderBoxShadow(green);
  // border: black 1pt solid;
+  height: 800px;
   padding: 20px;
   width: 90%;
   display: grid;
@@ -18,6 +19,10 @@
   // grid-template-columns: 50% 4fr 2fr;
   grid-template-columns: 80px repeat(3, 1fr);
   justify-content: space-between;
+  align-content: center; // horizontal
+  grid-auto-columns: 130px; // not in defined col
+  grid-auto-rows: 100px; // not in defined row
+  grid-auto-flow: row dense; // no empty cells
 
   //grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
@@ -67,4 +72,10 @@ app-grid-item{
   grid-row: 2 / span 3;
   grid-column: 1/ 2;
 
+}
+
+.outside-grid{
+  grid-row: 6 /7 ;
+  grid-column: 1/ 2;
+  @include borderBoxShadow(blue);
 }
