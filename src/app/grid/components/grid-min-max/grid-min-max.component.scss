@@ -14,7 +14,8 @@
   padding: 20px;
   width: 90%;
   display: grid;
-  grid-template-rows: repeat(2, 150px);
+  grid-template-rows: repeat(3, 150px);
+  grid-template-columns: max-content 1fr 1fr;
   grid-gap: 20px;
 
 }
@@ -24,6 +25,13 @@
 
 }
 .content{
+
+  padding: 20px;
+  @include borderBoxShadow(blue);
+
+  & p{
+    font-size: 3rem;
+  }
 
 }
 .footer, .top,  .content, app-grid-item{
