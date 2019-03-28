@@ -7,9 +7,10 @@ import { GridItemComponent } from './components/grid-item/grid-item.component';
 import { GridNumbersComponent } from './components/grid-numbers/grid-numbers.component';
 import {SharedModule} from '../shared/shared.module';
 import { GridNamesComponent } from './components/grid-names/grid-names.component';
+import { GridMinMaxComponent } from './components/grid-min-max/grid-min-max.component';
 
 @NgModule({
-  declarations: [GridHomeComponent, GridItemComponent, GridNumbersComponent, GridNamesComponent],
+  declarations: [GridHomeComponent, GridItemComponent, GridNumbersComponent, GridNamesComponent, GridMinMaxComponent],
   imports: [
     CommonModule,
     GridRoutingModule,

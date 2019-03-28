@@ -1,0 +1,43 @@
+@import "../../../../styles";
+
+:host{
+  display: block;
+}
+
+
+
+.container{
+  @include borderBoxShadow(green);
+  // border: black 1pt solid;
+  margin: 30px;
+  height: 800px;
+  padding: 20px;
+  width: 90%;
+  display: grid;
+  grid-template-rows: repeat(2, 150px);
+  grid-gap: 20px;
+
+}
+.top{
+  @include borderBoxShadow(green);
+
+
+}
+.content{
+
+}
+.footer, .top,  .content, app-grid-item{
+
+}
+
+.footer {
+
+}
+app-grid-item{
+  @include borderBoxShadow(black);
+
+}
+
+.app-grid-item-1{
+
+}
