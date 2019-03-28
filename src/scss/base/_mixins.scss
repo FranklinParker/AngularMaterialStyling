@@ -12,3 +12,9 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+@mixin borderBoxShadow($border-color) {
+  border: $border-color 1pt solid;
+  box-shadow: 0 20px 10px rgba(0, 0, 0, 0.62);
+
+}

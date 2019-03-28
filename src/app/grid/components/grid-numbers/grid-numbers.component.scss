@@ -4,7 +4,12 @@
   display: block;
 }
 
+
+
 .container{
+  @include borderBoxShadow(green);
+ // border: black 1pt solid;
+  padding: 20px;
   width: 90%;
   display: grid;
   margin: 30px auto;
@@ -12,7 +17,7 @@
   //  grid-template-columns: repeat(2,200px) 1fr;
   // grid-template-columns: 50% 4fr 2fr;
   grid-template-columns: 80px repeat(3, 1fr);
-
+  justify-content: space-between;
 
   //grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
