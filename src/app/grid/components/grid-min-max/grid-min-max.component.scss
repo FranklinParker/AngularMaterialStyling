@@ -19,8 +19,9 @@
   grid-template-rows: repeat(2, minmax(50px, min-content));
   //grid-template-columns: max-content minmax(50px, 200px) 1fr min-content;
   //grid-template-columns: repeat(auto-fill, 200px);
-  grid-template-columns: repeat(auto-fit,minmax(100px, 1fr) );
+  grid-template-columns: repeat(auto-fit,minmax(200px, 1fr) );
   grid-gap: 20px;
+  grid-auto-rows: minmax(50px, min-content);
 
 }
 .top{
