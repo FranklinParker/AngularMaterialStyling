@@ -1,18 +1,19 @@
 <div class="floating-container">
-  <div [ngClass]="floatClass">
-    <div *ngIf="!expanded"
-         class="expand_btn">
-      <button (click)="expanded=true"
-              mat-icon-button>
-        <mat-icon>expand_more</mat-icon>
-      </button>
-    </div>
-    <div *ngIf="expanded"
-         (click)="expanded=false"
-         class="shrink_btn">
-      <button mat-icon-button>
-        <mat-icon>expand_less</mat-icon>
-      </button>
-    </div>
+  <div *ngIf="!expanded"
+       class="shrunk_panel">
+    <button class="expand_btn"
+      (click)="expanded=true"
+            mat-icon-button>
+      <mat-icon>expand_more</mat-icon>
+    </button>
+  </div>
+  <div *ngIf="expanded"
+       @expandPanelState
+       class="expanded_panel">
+    <button class="shrink_btn"
+            (click)="expanded=false"
+      mat-icon-button>
+      <mat-icon>expand_less</mat-icon>
+    </button>
   </div>
 </div>
