@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-floating-home',
@@ -6,8 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./floating-home.component.scss']
 })
 export class FloatingHomeComponent implements OnInit {
+  expanded: boolean = false;
 
-  constructor() { }
+  constructor() {
+  }
+
+  get floatClass() {
+    return this.expanded ? 'expanded' : 'shrunk';
+  }
 
   ngOnInit() {
   }

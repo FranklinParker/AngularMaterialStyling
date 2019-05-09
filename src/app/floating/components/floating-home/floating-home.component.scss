@@ -1,0 +1,42 @@
+
+
+.floating-container{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  .expanded, .shrunk{
+    position: relative;
+    background-color: #adb5bc;
+
+  }
+  .shrunk{
+    align-self: center;
+    justify-self: center;
+    border: red 1pt solid;
+    position: relative;
+    width: 10rem;
+    height: 5rem;
+    .expand_btn{
+      position: absolute;
+      left: 33%;
+      bottom: 0;
+    }
+  }
+
+  .expanded{
+    width:100%;
+    border: blue 1pt solid;
+    height: 50rem;
+    .shrink_btn{
+      position: absolute;
+      right: 49%;
+      bottom: 0;
+
+    }
+  }
+
+
+
+
+}
+

@@ -1,3 +1,18 @@
-<p>
-  floating-home works!
-</p>
+<div class="floating-container">
+  <div [ngClass]="floatClass">
+    <div *ngIf="!expanded"
+         class="expand_btn">
+      <button (click)="expanded=true"
+              mat-icon-button>
+        <mat-icon>expand_more</mat-icon>
+      </button>
+    </div>
+    <div *ngIf="expanded"
+         (click)="expanded=false"
+         class="shrink_btn">
+      <button mat-icon-button>
+        <mat-icon>expand_less</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
