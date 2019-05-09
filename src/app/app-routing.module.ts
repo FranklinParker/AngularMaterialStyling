@@ -26,6 +26,12 @@ const routes: Routes = [
     loadChildren: './grid/grid.module#GridModule',
     data: {animation: {page: 'gridPage'}}
 
+  },
+  {
+    path: 'floating',
+    loadChildren: './floating/floating.module#FloatingModule',
+    data: {animation: {page: 'floatingPage'}}
+
   }
 
 
