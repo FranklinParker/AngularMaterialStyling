@@ -1,19 +1,12 @@
-<div class="floating-container">
-  <div *ngIf="!expanded"
-       class="shrunk_panel">
-    <button class="expand_btn"
-      (click)="expanded=true"
-            mat-icon-button>
-      <mat-icon>expand_more</mat-icon>
-    </button>
-  </div>
-  <div *ngIf="expanded"
-       @expandPanelState
-       class="expanded_panel">
-    <button class="shrink_btn"
-            (click)="expanded=false"
-      mat-icon-button>
-      <mat-icon>expand_less</mat-icon>
-    </button>
-  </div>
-</div>
+<mat-card>
+  <mat-card-content>
+    <mat-tab-group>
+      <mat-tab label="Example One">
+        <div cdkScrollable style="z-index:0; overflow-y: auto; height: 600px">
+          <app-floating-expand-one></app-floating-expand-one>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-card-content>
+</mat-card>
+

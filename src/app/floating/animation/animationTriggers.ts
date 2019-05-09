@@ -20,3 +20,17 @@ export const expandPanelStateTrigger = trigger('expandPanelState', [
 
   })))
 ]);
+
+
+export const shrunkPanelStateTrigger = trigger('shrunkPanelState', [
+  transition(':enter', [
+    style({
+      opacity: 0
+    }),
+    animate('700ms ease-in')
+  ]),
+  transition(':leave', animate('350ms ease-out', style({
+    opacity: 0,
+
+  })))
+]);
