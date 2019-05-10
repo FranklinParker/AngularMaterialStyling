@@ -11,13 +11,13 @@
             mat-icon-button
             class="expand-btn"
             (click)="top=false">
-      <mat-icon>mail</mat-icon>
+      <mat-icon [inline]="true">mail</mat-icon>
     </button>
     <button *ngIf="!top"
             mat-icon-button
             class="retract-btn"
             (click)="top = true">
-      <mat-icon>expand_less</mat-icon>
+      <mat-icon [inline]="true">expand_less</mat-icon>
     </button>
   </div>
 </div>
