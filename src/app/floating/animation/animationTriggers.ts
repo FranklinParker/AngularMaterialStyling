@@ -2,7 +2,8 @@ import {
   animate,
   style,
   transition,
-  trigger
+  trigger,
+  state
 } from '@angular/animations';
 
 
@@ -34,3 +35,33 @@ export const shrunkPanelStateTrigger = trigger('shrunkPanelState', [
 
   })))
 ]);
+
+
+
+export const expansionPanelStateTrigger = trigger('expansionPanelState', [
+  state('top', style({
+    top: '-50%'
+  })),
+  state('center', style({
+    top: '0'
+  })),
+  transition('top => center', [
+    // style({
+    //   border: '2px solid black',
+    //   padding: '19px'
+    // }),
+    // animate('200ms ease-out', style({
+    //   transform: 'scale(1.05)'
+    // })),
+    animate(200)
+  ]),
+  transition('center => top', [
+    // style({
+    //   border: '1px solid blue',
+    //   padding: '20px'
+    // }),
+    animate('300ms ease-out')
+  ]),
+  // transition('marked => default', animate('300ms ease-out')),
+]);
+
