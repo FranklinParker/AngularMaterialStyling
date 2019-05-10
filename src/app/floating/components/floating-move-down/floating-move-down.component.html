@@ -2,5 +2,11 @@
   <p>
     floating-move-down works!
   </p>
+  <button mat-button (click)="top=!top">Move</button>
+  <div
+    [@expansionPanelState]="top  ? 'top' : 'center'"
+    class="moving-div">
+    <p>moving</p>
+  </div>
 </div>
 

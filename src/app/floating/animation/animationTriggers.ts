@@ -40,7 +40,7 @@ export const shrunkPanelStateTrigger = trigger('shrunkPanelState', [
 
 export const expansionPanelStateTrigger = trigger('expansionPanelState', [
   state('top', style({
-    top: '-50%'
+    top: '-17rem'
   })),
   state('center', style({
     top: '0'

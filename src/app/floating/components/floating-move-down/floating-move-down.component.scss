@@ -3,4 +3,12 @@
   height: 100%;
   width: 100%;
   background-color: #a5adb4;
+  .moving-div{
+    position: absolute;
+    //top: -1rem;
+    left: 30%;
+    width: 20rem;
+    height: 20rem;
+    border: 1pt red solid;
+  }
 }
