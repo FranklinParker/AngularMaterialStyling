@@ -5,10 +5,13 @@
   background-color: #a5adb4;
   .moving-div{
     position: absolute;
-    //top: -1rem;
     left: 30%;
-    width: 20rem;
     height: 20rem;
     border: 1pt red solid;
+    .move-btn{
+      position: absolute;
+      bottom: 0;
+      left: 30%;
+    }
   }
 }

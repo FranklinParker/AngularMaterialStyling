@@ -37,29 +37,32 @@ export const shrunkPanelStateTrigger = trigger('shrunkPanelState', [
 ]);
 
 
-
 export const expansionPanelStateTrigger = trigger('expansionPanelState', [
   state('top', style({
+    width: '10rem',
     top: '-17rem'
   })),
   state('center', style({
+    width: '14rem',
     top: '0'
   })),
   transition('top => center', [
-    // style({
-    //   border: '2px solid black',
-    //   padding: '19px'
-    // }),
+    style({
+      transform: 'scale(1.05)',
+    }),
     // animate('200ms ease-out', style({
     //   transform: 'scale(1.05)'
     // })),
-    animate(200)
+    animate('300ms ease-out')
   ]),
   transition('center => top', [
     // style({
     //   border: '1px solid blue',
     //   padding: '20px'
     // }),
+    style({
+      transform: 'scale(1.05)',
+    }),
     animate('300ms ease-out')
   ]),
   // transition('marked => default', animate('300ms ease-out')),
