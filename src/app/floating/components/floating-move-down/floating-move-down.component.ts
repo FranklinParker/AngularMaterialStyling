@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {expansionPanelStateTrigger} from '../../animation/animationTriggers';
 
 @Component({
@@ -11,7 +11,13 @@ import {expansionPanelStateTrigger} from '../../animation/animationTriggers';
 })
 export class FloatingMoveDownComponent implements OnInit {
   top = true;
-  constructor() { }
+
+  constructor() {
+  }
+
+  get moveButtonIcon() {
+    return top ? 'expand_more' : 'expand_less';
+  }
 
   ngOnInit() {
   }

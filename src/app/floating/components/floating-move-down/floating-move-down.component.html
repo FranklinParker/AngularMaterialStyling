@@ -6,9 +6,15 @@
     [@expansionPanelState]="top  ? 'top' : 'center'"
     class="moving-div">
     <p>moving</p>
-    <button mat-button
+    <button *ngIf="top" mat-icon-button
             class="move-btn"
-            (click)="top=!top">Move</button>
+            (click)="top=!top"><mat-icon>expand_more</mat-icon>
+    </button>
+    <button *ngIf="!top" mat-icon-button
+            class="move-btn"
+            (click)="top=!top"><mat-icon>expand_less</mat-icon>
+    </button>
+
 
   </div>
 </div>
