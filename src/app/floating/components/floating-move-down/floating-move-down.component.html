@@ -8,13 +8,12 @@
     <p>moving</p>
     <button *ngIf="top" mat-icon-button
             class="move-btn"
-            (click)="top=!top"><mat-icon>expand_more</mat-icon>
+            (click)="top=false"><mat-icon>expand_more</mat-icon>
     </button>
     <button *ngIf="!top" mat-icon-button
             class="move-btn"
-            (click)="top=!top"><mat-icon>expand_less</mat-icon>
+            (click)="top = true"><mat-icon>expand_less</mat-icon>
     </button>
-
 
   </div>
 </div>
