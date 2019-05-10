@@ -44,7 +44,7 @@ export const expansionPanelStateTrigger = trigger('expansionPanelState', [
   })),
   state('center', style({
     width: '25rem',
-    top: '0'
+    top: '1.5rem'
   })),
   transition('top => center', [
     style({
@@ -53,7 +53,7 @@ export const expansionPanelStateTrigger = trigger('expansionPanelState', [
     // animate('200ms ease-out', style({
     //   transform: 'scale(1.05)'
     // })),
-    animate('300ms ease-out')
+    animate('400ms ease-out')
   ]),
   transition('center => top', [
     // style({
@@ -63,7 +63,7 @@ export const expansionPanelStateTrigger = trigger('expansionPanelState', [
     style({
       transform: 'scale(1.05)',
     }),
-    animate('300ms ease-out')
+    animate('400ms ease-out')
   ]),
   // transition('marked => default', animate('300ms ease-out')),
 ]);
