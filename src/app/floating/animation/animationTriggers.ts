@@ -43,7 +43,7 @@ export const expansionPanelStateTrigger = trigger('expansionPanelState', [
     top: '-17rem'
   })),
   state('center', style({
-    width: '14rem',
+    width: '25rem',
     top: '0'
   })),
   transition('top => center', [
