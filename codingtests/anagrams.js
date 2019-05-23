@@ -22,30 +22,31 @@ const countAnagrams = (wordsList) => {
   let count = 0;
   const sortedWordList = [];
   wordsList.forEach((word) => {
-    const sortedWord = sortWord(word);
+    const sortedWord = sortWordToUpper(word);
     sortedWordList.push(sortedWord);
-
   });
   let i, j;
+  let sortedMatchedIndexes = [];
   for (i = 0; i < sortedWordList.length; i++) {
-    console.log(sortedWordList[i]);
     for (j = 0; j < sortedWordList.length; j++) {
-      if(j!==i){
-        if(sortedWordList[i]===sortedWordList[j]){
+      let sortMatchIdx = sortWordToUpper(i+''+ j);
+
+      if(j!==i ){
+        if(sortedWordList[i]===sortedWordList[j]
+           && sortedMatchedIndexes.findIndex((idx)=> idx===sortMatchIdx)===-1){
           count++;
+          sortedMatchedIndexes.push( sortMatchIdx);
         }
       }
     }
 
   }
 
-  //  sortedWordList.forEach((word)=>{
-  //    console.log(word);
-  // })
   return count;
 };
 
-const sortWord = (word) => {
+
+const sortWordToUpper = (word) => {
   return word.toUpperCase().split("").sort().join("");
 }
 
