@@ -2,21 +2,21 @@
   <p>
     floating-move-down works!
   </p>
-  <div (mouseenter)="top=false"
-       (mouseleave)="top=true"
-    [@expansionPanelState]="top  ? 'top' : 'center'"
+  <div (mouseenter)="moveDown()"
+       (mouseleave)="moveUp()"
+    [@expansionPanelState]="expansionState"
     class="moving-div">
     <p>moving</p>
     <button *ngIf="top"
             mat-icon-button
             class="expand-btn"
-            (click)="top=false">
+            (click)="moveDown()">
       <mat-icon [inline]="true">mail</mat-icon>
     </button>
     <button *ngIf="!top"
             mat-icon-button
             class="retract-btn"
-            (click)="top = true">
+            (click)="moveUp()">
       <mat-icon [inline]="true">expand_less</mat-icon>
     </button>
   </div>

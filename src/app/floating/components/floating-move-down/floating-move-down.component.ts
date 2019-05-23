@@ -11,6 +11,7 @@ import {expansionPanelStateTrigger} from '../../animation/animationTriggers';
 })
 export class FloatingMoveDownComponent implements OnInit {
   top = true;
+  expansionState: string = 'top';
 
   constructor() {
   }
@@ -20,6 +21,17 @@ export class FloatingMoveDownComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  moveDown(){
+    this.top = false;
+    this.expansionState = 'center';
+
+  }
+  moveUp(){
+    this.top = true;
+    this.expansionState = 'top';
+
   }
 
 }
