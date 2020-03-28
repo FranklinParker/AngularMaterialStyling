@@ -11,25 +11,25 @@ const routes: Routes = [
   },
   {
     path: 'orders',
-    loadChildren: './orders/orders.module#OrdersModule',
+    loadChildren: () => import('./orders/orders.module').then(m => m.OrdersModule),
     data: {animation: {page: 'ordersPage'}}
 
   },
   {
     path: 'flex',
-    loadChildren: './flex/flex.module#FlexModule',
+    loadChildren: () => import('./flex/flex.module').then(m => m.FlexModule),
     data: {animation: {page: 'flexPage'}}
 
   },
   {
     path: 'grid',
-    loadChildren: './grid/grid.module#GridModule',
+    loadChildren: () => import('./grid/grid.module').then(m => m.GridModule),
     data: {animation: {page: 'gridPage'}}
 
   },
   {
     path: 'floating',
-    loadChildren: './floating/floating.module#FloatingModule',
+    loadChildren: () => import('./floating/floating.module').then(m => m.FloatingModule),
     data: {animation: {page: 'floatingPage'}}
 
   }
