@@ -1,0 +1,24 @@
+<div class="container">
+  <p>
+    floating-move-down works!
+  </p>
+  <div (mouseenter)="moveDown()"
+       (mouseleave)="moveUp()"
+    [@expansionPanelState]="expansionState"
+    class="moving-div">
+    <p>moving</p>
+    <button *ngIf="top"
+            mat-icon-button
+            class="expand-btn"
+            (click)="moveDown()">
+      <mat-icon [inline]="true">mail</mat-icon>
+    </button>
+    <button *ngIf="!top"
+            mat-icon-button
+            class="retract-btn"
+            (click)="moveUp()">
+      <mat-icon [inline]="true">expand_less</mat-icon>
+    </button>
+  </div>
+</div>
+

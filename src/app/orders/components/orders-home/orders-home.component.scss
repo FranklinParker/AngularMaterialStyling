@@ -1,0 +1,28 @@
+@import "../../../../styles";
+:host {
+  display: block;
+
+}
+
+mat-card mat-card-content{
+  position: relative;
+}
+
+mat-card mat-card-header h1{
+  font-size: 4rem;
+  transition: all 400ms;
+  @include respond(tab-port) {
+    font-size: 2.5rem;
+  }
+}
+
+app-product-selected{
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: $color-black;
+  height: 100vh;
+  width: 100%;
+}

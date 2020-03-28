@@ -1,0 +1,25 @@
+<mat-card [@cardSideState]="cardSide"
+          [ngStyle]="getBackGround()">
+  <ng-container *ngIf="cardSide==='front'">
+    <h2>{{product.productName}}</h2>
+    <p>{{backImage}}</p>
+    <mat-action-row>
+      <button mat-flat-button
+              (click)="onFlip()">Flip
+      </button>
+    </mat-action-row>
+  </ng-container>
+  <ng-container *ngIf="cardSide==='back'">
+      <h2 class="flip-y">{{product.description}}</h2>
+      <mat-action-row>
+        <button mat-flat-button
+                class="flip-y"
+                (click)="onSelect()">Show Info
+        </button>
+        <button mat-flat-button
+                class="flip-y"
+                (click)="onFlip()">Flip
+        </button>
+      </mat-action-row>
+  </ng-container>
+</mat-card>

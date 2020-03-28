@@ -1,0 +1,43 @@
+
+
+.floating-container{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  .expanded_panel, .shrunk_panel{
+    position: relative;
+    background-color: #adb5bc;
+
+  }
+  .shrunk_panel{
+    align-self: center;
+    justify-self: center;
+    border: red 1pt solid;
+    position: relative;
+    width: 10rem;
+    height: 5rem;
+    .expand_btn{
+      position: absolute;
+      left: 33%;
+      bottom: 0;
+    }
+  }
+
+  .expanded_panel{
+    align-self: center;
+    width:70%;
+    border: blue 1pt solid;
+    height: 50rem;
+    .shrink_btn{
+      position: absolute;
+      right: 49%;
+      bottom: 0;
+
+    }
+  }
+
+
+
+
+}
+

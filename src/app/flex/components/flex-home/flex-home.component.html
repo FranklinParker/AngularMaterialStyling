@@ -1,0 +1,14 @@
+<div class="container">
+  <app-flex-nav
+    [open]="leftNavOpen"
+    (menuOpenState)="onLeftMenuOpenState($event)"
+    [ngClass]="leftNavClass" ></app-flex-nav>
+  <div class="content">
+
+    <app-flex-item [description]="'test'"></app-flex-item>
+    <app-flex-item [description]="'test1'"
+                   class="app-flex-item-wide"></app-flex-item>
+    <app-flex-item [description]="'test3'"></app-flex-item>
+    <app-flex-item [description]="'test4'"></app-flex-item>
+  </div>
+</div>

@@ -14,6 +14,7 @@
     <ng-container *ngIf="!loggedInUser" >
       <ul  fxLayout fxLayoutGap="10px" class="navigation-list-items">
         <li><a routerLink="/login" mat-button
+               (click)="loggedInUser=true"
                routerLinkActive="mat-accent">Login</a>
         </li>
       </ul>
@@ -33,12 +34,36 @@
         </li>
       </ul>
       <ul fxLayout fxLayoutGap="10px" class="navigation-list-items">
-        <li><a routerLink="/" mat-button
-               routerLinkActive="mat-accent">Home For Name</a>
+        <li><a routerLink="/orders" mat-button
+               routerLinkActive="mat-accent">Orders</a>
         </li>
       </ul>
       <ul fxLayout fxLayoutGap="10px" class="navigation-list-items">
         <li><a mat-stroked-button (click)="onLogout()">Logout</a>
+        </li>
+      </ul>
+      <ul fxLayout
+          fxLayoutGap="10px"
+          class="navigation-list-items">
+        <li>
+          <a mat-button [matMenuTriggerFor]="demoMenu">Demos</a>
+          <mat-menu #demoMenu="matMenu"
+                    [overlapTrigger]="false">
+            <mat-label mat-menu-item routerLink="/flex">
+              <mat-icon>picture_in_picture</mat-icon>
+              Flex Demo
+            </mat-label>
+            <mat-label mat-menu-item routerLink="/grid">
+              <mat-icon>border_all</mat-icon>
+              Grid Demo
+            </mat-label>
+            <mat-label mat-menu-item routerLink="/floating">
+              <mat-icon>border_all</mat-icon>
+              Floating Components Demo
+            </mat-label>
+
+
+          </mat-menu>
         </li>
       </ul>
     </ng-container>

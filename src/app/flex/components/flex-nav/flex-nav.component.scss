@@ -1,0 +1,80 @@
+@mixin menu{
+  height: 100vh;
+  position: relative;
+  background-color: lightseagreen;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+
+
+
+.left-menu{
+  @include menu;
+
+  &__button{
+    margin-top: 40px;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    font-weight: 500;
+    color: blue;
+    width: 100%;
+    &:not(:first-child) {
+      margin-top: 15px;
+    }
+  }
+
+  &__button:hover{
+    color: white;
+    font-size: 2.7rem;
+    background-color: darkblue;
+  }
+  &__close-button{
+    color: darkblue;
+    margin-right: 2px;
+    position: absolute;
+    top: 20%;
+    font-size: 2rem;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+  }
+  &__close-icon{
+    height: 3rem;
+    width: 3rem;
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
+
+}
+
+.left-menu-closed{
+  @include menu;
+
+  &__open-button{
+    position: absolute;
+    top: 20%;
+    font-size: 2rem;
+    left: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  &__open-icon{
+    height: 3rem;
+    width: 3rem;
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
+
+
+}

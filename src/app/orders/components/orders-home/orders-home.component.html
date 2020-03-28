@@ -1,0 +1,20 @@
+<mat-card>
+  <mat-card-header>
+    <h1>Card Demo</h1>
+  </mat-card-header>
+  <mat-card-content>
+    <app-product-selected
+      @showState
+      (closePopup)="showSelected=false"
+      [product]="product"
+      *ngIf="showSelected"></app-product-selected>
+    <ng-container *ngFor="let rowPos of getProductRows()">
+      <div class="row">
+        <div *ngFor="let product of getProductRow(rowPos * 3,3)" class="col-1-of-3 cell">
+          <app-orders-products [product]="product"
+                               (productSelected)="onProductSelected($event)"></app-orders-products>
+        </div>
+      </div>
+    </ng-container>
+  </mat-card-content>
+</mat-card>

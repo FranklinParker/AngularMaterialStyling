@@ -1,0 +1,16 @@
+:host{
+  display: flex;
+}
+.item-container{
+  flex: 1;
+  display: flex;
+  color: white;
+  flex-direction: column;
+  background-color: rgba(32, 178, 170, 0.81);
+  font-size: 2rem;
+  & p{
+    flex: 1;
+    margin: 30px auto;
+    font-weight: 900;
+  }
+}
