@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { GridMinMaxComponent } from './grid-min-max.component';
 
@@ -6,7 +6,7 @@ describe('GridMinMaxComponent', () => {
   let component: GridMinMaxComponent;
   let fixture: ComponentFixture<GridMinMaxComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ GridMinMaxComponent ]
     })
