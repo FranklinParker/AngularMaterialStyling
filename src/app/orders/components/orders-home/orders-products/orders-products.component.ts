@@ -27,6 +27,7 @@ export class OrdersProductsComponent implements OnInit {
   @Output() productSelected: EventEmitter<Product> = new EventEmitter<Product>();
 
   cardSide = 'front';
+  backImage: string;
 
   constructor() {
   }
