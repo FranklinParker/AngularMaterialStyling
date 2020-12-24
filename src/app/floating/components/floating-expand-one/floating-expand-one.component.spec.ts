@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { FloatingExpandOneComponent } from './floating-expand-one.component';
 
@@ -6,7 +6,7 @@ describe('FloatingExpandOneComponent', () => {
   let component: FloatingExpandOneComponent;
   let fixture: ComponentFixture<FloatingExpandOneComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ FloatingExpandOneComponent ]
     })
